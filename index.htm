@@ -254,6 +254,7 @@ padding: 5px;
 	
 	function SwitchFrame(iFrame) {
 		var frames = document.getElementsByClassName("switch");
+		if (iFrame == null) { document.getElementById("none").style.display = 'block'; }
 		for (i=0;i<frames.length;i++) {
 			if (frames[i].id == iFrame) {
 				frames[i].style.display = 'block';
@@ -326,6 +327,7 @@ padding: 5px;
 	<button class="big button srch" name="Courses" Dir="rtl" onclick="SwitchFrame(this.name)" style="display: inline-block;"/ ><img src="./images/courses.png" height="10px;">&nbsp;ביקורות קורסי בחירה</button>
 	<br/>
 	<button class="button add" name="DriveDir" Dir="rtl" onclick="popitup()" style="display: none;"/ ><img src="./images/plus.png" height="10px;">&nbsp;העלה קובץ</button>
+	<img class="switch" id="none" src="./images/zaha.jpg" width="100%" frameborder="0" style="display: block;"/>
 	<iframe class="switch" id="DriveDir" src="https://drive.google.com/embeddedfolderview?id=0BymOy7I973h5MFVjYjFyOGJuNGM#list" width="700" height="500" frameborder="0" style="display: none;"></iframe>
 	<iframe class="switch" id="LaserBig" src="https://docs.google.com/spreadsheets/d/1byQafMz1qD_svip68LjS9gnhGOdLboCVCmsTU2E-ooo/edit?usp=sharing&rm=minimal" width="700" height="100" style="display: none;"></iframe>
 	<iframe class="switch" id="LaserSmall" src="https://docs.google.com/spreadsheets/d/1PUs9pWWrxGdxNWTk420WFvo15Jf3jGSKE_vDJ95XIwU/edit?usp=sharing&rm=minimal" width="700" height="100" style="display: none;"></iframe>
