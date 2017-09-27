@@ -1,0 +1,353 @@
+<html lang="he" dir=rtl>
+<head>
+  <meta charset="utf-8">
+  <meta content="ie=edge" http-equiv="x-ua-compatible">
+  <title>קורסי בחירה - ביקורות</title>
+<style type="text/css" media="screen">
+
+/***************************
+    Site Design CSS
+***************************/
+
+#box {
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: auto;
+  width: auto;
+  padding: 5px;
+  color: #333;
+  text-align: center;
+  overflow: visible;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  line-height: 1em;
+  letter-spacing: -2px;
+  margin: 0.8rem 0 0 0;
+  padding-bottom: 5px;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 1.65em;
+  margin: 0.6em auto 0.6em auto;
+  padding: 0;
+  width: 23em;
+}
+
+p.small {
+  font-size: 0.8em;
+}
+
+a,
+a:visited,
+a:hover {
+  color: #333;
+  font-weight: 600;
+}
+
+
+/***************************
+    Google Table CSS
+***************************/
+
+.google-visualization-table-tr-even,
+.google-visualization-table-tr-even td,
+.google-visualization-table-tr-even-nonstrict {
+  background-color: #fff !important;
+  color: #333 !important;
+}
+
+.google-visualization-table-tr-odd,
+.google-visualization-table-tr-odd td,
+.google-visualization-table-tr-odd-nonstrict {
+  background-color: #fff !important;
+  color: #333 !important;
+}
+
+.google-visualization-table-tr-sel,
+.google-visualization-table-tr-sel td,
+.google-visualization-table-tr-sel-nonstrict {
+  background-color: #666 !important;
+  color: #fff !important;
+}
+
+.google-visualization-table-tr-over,
+.google-visualization-table-tr-over td,
+.google-visualization-table-tr-over-nonstrict {
+  background-color: #666 !important;
+  color: #fff !important;
+}
+
+.google-visualization-table-td,
+.google-visualization-table-th {
+  border: 1px solid #666 !important;
+  color: #fff !important;
+}
+
+.boldify{
+  font-weight: bold !important;
+
+}
+
+.google-visualization-table-tr-head,
+.google-visualization-table-tr-head td,
+.google-visualization-table-tr-head-nonstrict {
+  background-color: #333 !important;
+  background-image: none !important;
+  color: #fff !important;
+}
+
+.google-visualization-table .gradient {
+  background-image: none !important;
+}
+
+
+/***************************
+    Text Selection CSS
+***************************/
+
+::-moz-selection {
+  color: #fff;
+  background: #333;
+}
+
+::selection {
+  color: #fff;
+  background: #333;
+}
+
+
+body, html {width: 100%; height: 100%; margin: 0; padding: 0; font-family:Arial, Helvetica Neue, Helvetica, sans-serif;font-weight:normal;}
+.box {display: table; empty-cells: show; border-collapse: collapse; width: 100%; height: 100%;}
+iframe {width: 100%; height: 100%; border: none; margin: 0; padding: 0; display: block;}
+.table {width: 100%; height: 30%; border: none; margin: 0; padding: 0; display: block;}
+
+select.empty{
+  color: grey;
+}
+select.selected{
+  color: black;
+}
+
+option[default] {
+    color: grey;
+}
+
+option {
+  color: black;
+}
+
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 2px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.srch{
+    background-color: white;
+    color: black;
+    border: 1px solid #555555;
+}
+
+.srch:hover {
+    background-color: #555555;
+    color: white;
+}
+.add {
+    background-color: white; 
+    color: black; 
+    border: 1px solid #f44336;
+}
+
+.add:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+#watermark
+{
+text-align: left;
+padding: 5px;
+ position:fixed;
+ bottom:0px;
+ right:0px;
+ opacity:0.9;
+ z-index:99;
+ background-color:white;
+ color:gray;
+ font-size: x-small;
+ width: 100%; height: 20px; border: none; margin: -10px; display: block;
+ vertical-align: middle;
+}
+</style>
+
+  <script src="https://www.google.com/jsapi" type="text/javascript"></script>
+
+  
+<!--   google.com/webhp?#btnI=I&q=site%3Ahttps%3A%2F%2Fwww30.tau.ac.il%2F+תולדות+הנצרות&oq=site%3Ahttps%3A%2F%2Fwww30.tau.ac.il%2F+תולדות+הנצרות -->
+</head>
+<div id="watermark">© כל הזכויות שמורות לתם מלול, ספטמבר 2017.</div>
+<body id="background" dir=rtl>
+  <center>
+  <div id="box" dir=rtl>
+
+    <h1>קורסי בחירה - ביקורות</h1>
+	<form name="searchqry" Dir="rtl" onsubmit="return false;" style="margin-top: 2px;margin-bottom: 10px;">
+
+<div id="showCourse" style="display: block;">
+<button id="rev1" class="button add" Dir="rtl" onclick="javascript:AddRev()"><img src="./images/plus.png" height="10px;">&nbsp;הוסף ביקורת</button> &nbsp; | &nbsp;
+<select name="ctype" id="ctype" class="empty" style="border: 1px solid #555555;padding: 3px 4px 3.5px 4px;" onchange="SearchForm()">
+<option value="" default selected>מסגרת</option>
+  <option value="אמנות">אמנות</option>
+  <option value="מדעי הרוח">מדעי הרוח</option>
+  <option value="אחר">אחר</option>
+</select>
+&nbsp;&nbsp;
+    <input type="text" name="cname" id="cname" placeholder="שם הקורס" Dir="rtl" style="border: 1px solid #555555;padding: 4px 4px; width: 130px;" oninput="SearchForm()"/>
+&nbsp;&nbsp;
+    <input type="text" name="pname" id="pname" placeholder="שם המרצה" Dir="rtl" style="border: 1px solid #555555;padding: 4px 4px; width: 130px;" oninput="SearchForm()"/>
+&nbsp; | &nbsp;
+<!--     <button class="button srch" Dir="rtl" onclick="javascript:SearchForm()"/ >חיפוש</button>  -->
+    <button class="button srch" Dir="rtl" onclick="javascript:ClearForm()"/ ><img src="./images/reset.png" height="10px;">&nbsp;איפוס</button> 
+	<br/>
+	<br/>
+	<font size="2">לחצו על כותרת עמודה בכדי לסדר את המידע לפיה.</font>
+	<br/>
+	<font color="#f44336"><b>לחצו על קורס בכדי לחפש את הסילבוס שלו. </b></font>
+
+	    <script type="text/javascript">
+	google.load('visualization', '1', {
+    packages: ['table']
+});
+var visualization;
+
+function popitup(url) {
+        newwindow=window.open(url,'name','height=600,width=600');
+        if (window.focus) {newwindow.focus()}
+        return false;
+    }
+
+function getSelected() {
+	var elmnt = document.getElementsByClassName("google-visualization-table-tr-sel")[0].childNodes;
+	if (elmnt.length>0) {
+		var selCrs = elmnt[0].innerHTML;
+		var selProf = elmnt[2].innerHTML;
+		var strSr = "https://www.google.com/webhp?#btnI=I&q=site%3Ahttps%3A%2F%2Fwww30.tau.ac.il%2F+" + selCrs + "+" + selProf + "&oq=site%3Ahttps%3A%2F%2Fwww30.tau.ac.il%2F+" + selCrs + "+" + selProf;
+		popitup(strSr);
+	}
+}
+
+function Boldify() {
+	var elmnt = document.getElementsByTagName("TR");
+	for (i=0; i<elmnt.length ; i++){
+		elmnt[i].childNodes[0].className += " Boldify";
+	}
+}
+
+
+function SearchForm() {
+	var objCType = document.getElementById("ctype")[document.getElementById("ctype").selectedIndex];
+	var objCName = document.getElementById("cname");
+	var objPName = document.getElementById("pname");
+	var ctype = "\""+objCType.value+"\"";
+	var cname = "\""+objCName.value+"\"";
+	var pname = "\""+objPName.value+"\"";
+    var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=15ukrfTaK7P8MPKXOUeYPhPnUuDnxGwrl0kHuLjwcQs0&output=html&usp=sharing');
+    query.setQuery('SELECT B, C, D, E, F, G, H, I, A WHERE B CONTAINS ' + cname + ' AND C CONTAINS ' + ctype + ' AND D CONTAINS ' + pname + ' ORDER BY A DESC');
+    query.send(handleQueryResponse);
+
+}
+
+function ClearForm() {
+	document.getElementById("ctype").selectedIndex = "0";
+	document.getElementById("ctype").value = "";
+	document.getElementById("cname").value = "";
+	document.getElementById("pname").value = "";
+	SearchForm();
+}
+
+function AddRev() {
+	document.getElementById("showCourse").style.display = 'none';
+	document.getElementById("addCourse").style.display = 'block';
+
+}
+
+function BckRev() {
+	document.getElementById("showCourse").style.display = 'block';
+	document.getElementById("addCourse").style.display = 'none';
+}
+
+function drawVisualization(ctype,cname,pname) {
+    var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=15ukrfTaK7P8MPKXOUeYPhPnUuDnxGwrl0kHuLjwcQs0&output=html&usp=sharing');
+    query.setQuery('SELECT B, C, D, E, F, G, H, I, A ORDER BY A DESC');
+    query.send(handleQueryResponse);
+}
+
+function handleQueryResponse(response) {
+    if (response.isError()) {
+        alert('There was a problem with your query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+        return;
+    }
+    var data = response.getDataTable();
+    visualization = new google.visualization.Table(document.getElementById('table'));
+    visualization.draw(data, {
+        legend: 'bottom'
+    });
+	var count = Object.keys(visualization).length;
+	if (count < 33) {
+		document.getElementById('table').style.display = 'none';
+		document.getElementById('noData').style.display = 'block';
+	}
+	else {
+		document.getElementById('table').style.display = 'block';
+		document.getElementById('noData').style.display = 'none';
+		Boldify();
+	}
+}
+google.setOnLoadCallback(drawVisualization);
+	</script>
+	
+	
+    <div id="table" dir=rtl style="margin-top: 5px;" onclick="getSelected()">
+		<center>טוען...</center>
+    </div>
+	<div id="noData" dir=rtl style="margin-top: 20px; display:none;">
+		<center>אין נתונים המתאימים לחיפוש.</center>
+    </div>
+</div>
+
+	<div id="syl" style="display: none;">
+	<button id="bck1" class="button add" Dir="rtl" onclick="javascript:BckRev();"/ >חזור לרשימת ביקורות</button>
+	<iframe name="sylIFrame" id="sylIFrame" frameborder='0' dir='rtl' src="https://www.google.com/webhp?#btnI=I&q=site%3Ahttps%3A%2F%2Fwww30.tau.ac.il&oq=site%3Ahttps%3A%2F%2Fwww30.tau.ac.il" style="margin-top: 20px;"></iframe>
+	</div>
+	
+	<div id="addCourse" style="display: none;">
+	<button id="bck1" class="button add" Dir="rtl" onclick="javascript:BckRev();"/ >חזור לרשימת ביקורות</button>
+	<iframe name='iframe1' id="iframe1" frameborder='0' dir='rtl' src='https://docs.google.com/forms/d/e/1FAIpQLSeYixMPFpuZacPOmT5nZVYyWQrmSbq4rt8m04eTaaEQ01m_dA/viewform?embedded=true' style="margin-top: 20px;"></iframe>
+	</div>
+</form>
+</center>
+
+  </div>
+</body>
+</html>
