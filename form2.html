@@ -1,0 +1,369 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <base target="_blank">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>File Upload Form #25490 from tommelloul@mail.tau.ac.il)</title>
+    <style>
+        body {
+            background-color: #e0f2f1;
+        }
+
+        form p, form label {
+            font-size: 120%;
+        }
+		.row .col.m6 {
+		width: auto !important;
+		}
+
+        .signature {
+          border: 2px dashed #ccc;
+          background-color:#fafafa;
+          height: 150px;
+          margin-bottom: 20px
+        }
+
+        .ctrlqHeaderMast {
+            height: 278px;
+            background: #009688;
+        }
+
+        .ctrlqFormContent {
+            color: rgba(0, 0, 0, .87);
+            padding: 20px 35px
+        }
+
+        .ctrlqFormContentWrapper {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            box-orient: vertical;
+            -webkit-flex-direction: column;
+            flex-direction: column
+        }
+
+        .ctrlqAccent {
+            background-color: #a7ffeb;
+            height: 8px;
+        }
+
+        .ctrlqCenteredContent {
+            margin: auto;
+            width: 600px;
+        }
+
+        .ctrlqFormCard {
+            background-color: #fff;
+            margin-bottom: 48px;
+            -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+            box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+            word-wrap: break-word
+        }
+
+        .ctrlqFormCard:first-of-type {
+            margin-top: -100px
+        }
+
+        .ctrlqHeaderTitle {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            font-size: 34px;
+            line-height: 135%;
+            max-width: 100%;
+            min-width: 0%;
+            margin-bottom: 22px
+        }
+
+        @media (max-width: 660px) {
+            .ctrlqHeaderMast {
+                height: 122px;
+            }
+            .ctrlqFormCard:first-of-type {
+                margin-top: -50px;
+            }
+            .ctrlqCenteredContent {
+                width: 90%;
+            }
+        }
+
+        div.error {
+            position: relative;
+            top: -1rem;
+            left: 0rem;
+            font-size: 0.9rem;
+            color: #FF4081;
+            -webkit-transform: translateY(0%);
+            -ms-transform: translateY(0%);
+            -o-transform: translateY(0%);
+            transform: translateY(0%);
+        }
+
+        div#recaptcha_error, div#signature_error {
+          position: relative;
+          top: .5rem;
+          left: 0rem;
+          font-size: 0.9rem;
+          color: #FF4081;
+          -webkit-transform: translateY(0%);
+          -ms-transform: translateY(0%);
+          -o-transform: translateY(0%);
+          transform: translateY(0%);
+        }
+
+		
+		
+		div.cloudwok-download-files, div.form-group, .modal-body { display: none !important}
+span.filepicker span {
+  display: none;
+}
+
+.spacer-50 {
+height: 20px !important;
+}
+
+.cloudwok-embed {
+width: 95%;
+background-color: #EEEEEE;
+}
+.div.row-clearfix {
+background-color: #DDDEEE;
+}
+.dropzone {
+background-color: transparent !important;
+}
+
+.modal-footer {
+text-align: center !important;
+background-color: transparent !important;
+}
+
+.modal-backdrop, .modal-finished {
+text-align: center !important;
+background-color: transparent !important;
+height: 200px !important;
+}
+.modal-finished {
+text-align: center !important;
+height: 350px !important;
+box-shadow: none;
+}
+
+.modal-title {
+  text-indent: -9999px;
+  line-height: 0 !important; /* Collapse the original line */
+}
+
+.modal-title::after {
+  content: "הקבצים עלו בהצלחה";
+  text-indent: 0;
+  display: block;
+  line-height: initial; /* New content takes up original line height */
+}
+
+span.filepicker {
+width: 120px;
+  position: relative;
+  left: 50px;
+
+}
+
+span.filepicker:after {
+  content: 'הוסף קבצים';
+}
+
+span.text-instruction strong {
+  visibility:hidden;
+}
+span.text-instruction {
+}
+
+
+span.text-instruction:after {
+  content: 'ניתן גם לגרור קבצים ולשחרר כאן';
+  display: block;
+    margin-top: 10px;
+}
+
+
+.btn-start-upload {
+  text-indent: -9999px;
+  line-height: 1 !important; /* Collapse the original line */
+  height: 32px;
+  padding: 0px 19px !important;
+  position:relative;
+  width: 120px;
+  left: 20px;
+  top: 10px;
+}
+
+.fa-send {
+display:none !important;
+}
+
+.dropzone .text-right a:link {
+display:none;
+}
+
+div.cloudwok-upload-message {
+width: 75px;
+  position: relative;
+}
+.cloudwok-embed {
+padding-top: 20px;
+padding-bottom: 20px;
+}
+
+.btn-start-upload:after {
+  content: 'התחל העברה...';
+  text-indent: 0 !important;
+  display: block;
+  line-height: 0; /* New content takes up original line height */
+  position: relative;
+  left: 8px;
+}
+
+.btn-cancel {
+  text-indent: -9999px;
+  line-height: 1 !important; /* Collapse the original line */
+  height: 30px;
+  width: 74px;
+  padding: 0px 19px !important;
+  display: block !important;
+  position: relative;
+  left: 24px;
+}
+
+.text-success {
+  position: relative;
+  left: 24px;
+}
+
+.btn-cancel:after {
+  content: 'הסר';
+  text-indent: 0 !important;
+  display: table;
+  line-height: 0; /* New content takes up original line height */
+    position: relative;
+    bottom: 5px;
+    right: 2px;
+}
+
+ .btn-success {
+ background-color: #ff837a !important;
+ border-color:  #ff837a !important;
+ }
+
+ .btn-primary {
+ background-color: #333 !important;
+ border-color:  #333 !important;
+ }
+
+.ctrlqHeaderMast {
+    height: 200px;
+    background: #555;
+} 
+
+.ctrlqAccent {
+    background-color: #888;
+    height: 8px;
+}
+body {
+    background-color: #CCC;
+}
+.row {
+margin-bottom: 0px;
+}
+    </style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="./scripts/jquery.gdrive-1.2.0.min.js"></script>
+
+</head>
+
+<body>
+    <div class="ctrlqFormContentWrapper">
+        <div class="ctrlqHeaderMast"></div>
+        <div class="ctrlqCenteredContent">
+            <div class="ctrlqFormCard">
+                <div class="ctrlqAccent"></div>
+                <div class="ctrlqFormContent">
+                      <div class="row"><div class="vfb-form-group"><div><span class="ctrlq-description"><style type="text/css" media="screen">
+* { direction: rtl; unicode-bidi: embed; }
+text-readable { direction: ltr;}
+input.select-dropdown { padding-right: 15px !important; }
+label {padding-right: 23px !important; }
+select { display: block !important;}
+
+</style></span></div></div></div><div class="row"><div class="input-field col s12"><center><h2>העלאת קובץ</h4><p><p><span class="ctrlq-description">אין להעלות תוכנות פרוצות ושאר קבצים שאינם חוקיים</span></p></center>
+</p></div></div><div class="row"><div class="input-field col s12"><h4>קטגוריה</h4></div></div><div class="row"><div class="input-field col s12"><select id="ctrlq-field-181305" name="קטגוריה" class="validate" data-error="#err181305" required><option value="" disabled selected >קטגוריה</option><option value="קורסי בחירה" קורסי בחירה>קורסי בחירה</option><option value="שנה א'" שנה א'>שנה א'</option><option value="שנה ב'" שנה ב'>שנה ב'</option><option value="שנה ג'" שנה ג'>שנה ג'</option><option value="שנה ד'" שנה ד'>שנה ד'</option><option value="שנה ה'" שנה ה'>שנה ה'</option><option value="שונות" שונות>שונות</option></select><div id="err181305"></div></div></div><div class="row"><div class="input-field col s12"><h4>תיקיה</h4><p><p><span class="ctrlq-description">אנא בחרו שם אינפורמטיבי לתיקיה!<br />
+לדוגמא: תולדות האמנות ב&#8217; &#8211; פרופ&#8217; מוסקוביץ&#8217; &#8211; 2017</span></p>
+</p></div></div><div class="row"><div class="input-field col s12"><input id="ctrlq181306" class="validate" required="required" data-error="#err181306" name="שם תיקייה" type="text" value=""><label for="ctrlq181306">שם תיקייה</label><div id="err181306"></div></div></div><div class="row"><div class="input-field col s12"><div><div class="g-recaptcha" data-sitekey="6LdDISgTAAAAAH_Z8LCpr0I2JCL5pNnpFp5ROHPz"></div></div><div id="recaptcha_error"></div></div></div> 
+<center>
+<button id="apiDriveAuthenticate" type="submit">Start Google Drive Authentication</button>
+<div id="gDriveAuthorization"></div>
+
+
+
+                       <div class="row" style="width: 200px;">
+					   <center>
+                            <div class="input-field col m6 s12">
+                                <p>
+                                  <button onclick="submitForm();return false;" class="waves-effect waves-light btn-large" disabled>
+                                    <i class="material-icons right">backup</i>אישור
+                                  </button>
+                                </p>
+                            </div>
+							</center>
+                        </div>
+						</center>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+</body>
+
+<script type="text/javascript">
+//gdrive options with authentication and authorization level requested
+var gdrive_pluginOptions = {
+    authentication: {
+        clientID: "122488114918-nglpk6s50b8n513buvj18vutqq8ueg4a.apps.googleusercontent.com",
+        keyAPI: "AIzaSyCwKGX1xS4qxQ9ppmz5nDoQINVrd8dbYWc"
+    },
+    scopes: ["https://www.googleapis.com/auth/drive", "https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/userinfo.email"]
+}
+
+//initialize gdrive
+$(function () {
+    //initialize
+    $("#apiDriveAuthenticate").gDrive(gdrive_pluginOptions);
+    //listen to the event
+    $('body').bind('DrivePlugin_loaded',
+   function (e, data) {
+       
+    	var auth = $.gDrive.authorized();
+    	if (auth) {
+        	$("#apiDriveAuthenticate").hide();
+        	$("#gDriveAuthorization").css("color", "green");
+        	$("#gDriveAuthorization").text("Authorized");
+    	}
+    	else {
+        	$("#gDriveAuthorization").css("color", "orange");
+        	$("#gDriveAuthorization").text("Not Authorized");
+    	}
+
+   });
+
+});
+</script>
+
+</html>
